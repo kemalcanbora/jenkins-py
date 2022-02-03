@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  jenkins:
+    image: jenkins/jenkins:latest
+    container_name: my-jenkins
+    ports:
+      - 8099:8080
+    volumes:
+      - ~/apps/jenkins:/var/jenkins_home
+    restart: on-failure
